@@ -1,0 +1,28 @@
+.about-container{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-heading{
+    align-self: center;
+}
+
+.about-description{
+}
+
+.about-content-container{
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: #808080 0px 0px 5px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content-container {
+        width: 90%;
+    }
+}

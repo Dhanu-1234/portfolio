@@ -1,0 +1,57 @@
+.resume-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-about-container{
+    width: 40%;
+    text-align: center;
+}
+
+.anchor-link{
+    margin: 10px;
+}
+
+.education-container{
+    width: 60%;
+}
+
+.mini-heading {
+    margin: 0px;
+}
+
+.college-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.highlighted-text{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .education-container {
+        width: 95%;
+    }
+
+    .resume-about-container {
+        width: 80%;
+    }
+
+    .college-name {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}

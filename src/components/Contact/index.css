@@ -1,0 +1,33 @@
+.contact-container{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: #808080 0px 0px 5px 0px;
+}
+
+.details{
+    margin: 5px;
+}
+
+.highlighted-text{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+    .contact-content {
+        width: 90%;
+    }
+}
