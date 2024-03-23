@@ -1,6 +1,9 @@
 import {Link, withRouter} from 'react-router-dom'
 import { MdDarkMode, MdLightMode } from "react-icons/md"
+import { BsFillMoonStarsFill } from "react-icons/bs"
 import ThemeContext from '../../context/ThemeContext'
+import lightLogo from './Logo.svg'
+import darkLogo from './Logo.png'
 import './index.css'
 
 const Header = (props) => (
@@ -8,14 +11,7 @@ const Header = (props) => (
         {value => {
             const {isDark, changeTheme} = value
             const navLinkStyles = isDark === true ? 'nav-link-dark':'nav-link-light'
-            const {location} = props
-            const {pathname} = location
-            const homeTab = pathname === '/' ? 'active-tab': navLinkStyles
-            const aboutTab = pathname === '/about' ? 'active-tab': navLinkStyles
-            const resumeTab = pathname === '/resume' ? 'active-tab': navLinkStyles
-            const skillsTab = pathname === '/skills' ? 'active-tab': navLinkStyles
-            const projectsTab = pathname === '/projects' ? 'active-tab': navLinkStyles
-            const contactTab = pathname === '/contact' ? 'active-tab': navLinkStyles
+            const logo = isDark === true ? darkLogo : lightLogo
 
             const onChangeTheme = () => {
                 changeTheme()
@@ -25,9 +21,9 @@ const Header = (props) => (
                 <nav className='header'>
                     <div className='logo-container'>
                         <Link to="/">
-                            <img src="https://logodix.com/logo/60724.png" alt="website logo" className='logo-styles'/>
+                            <img src={logo} alt="website logo" className='logo-styles'/>
                         </Link>
-                        <h3 className='heading'>Dhanumjai Sarnala</h3>
+                        <h3 className='heading'>Anish Kumar Sinha</h3>
                     </div>
                     <button type="button" className='mob-theme-change-button' onClick={onChangeTheme}>
                             {isDark === true ? <MdLightMode className='light-icon'/> : <MdDarkMode className='dark-icon'/>}
@@ -35,26 +31,26 @@ const Header = (props) => (
                     <div className='options-container'>
                         <ul className='options-list'>
                             <li className='option-item'>
-                                <Link to="/" className={homeTab}>Home</Link>
+                                <Link to="/" className={navLinkStyles}>Home</Link>
                             </li>
                             <li className='option-item'>
-                                <Link to="/resume" className={resumeTab}>Resume</Link>
+                                <Link to="/about" className={navLinkStyles}>About</Link>
                             </li>
                             <li className='option-item'>
-                                <Link to="/skills" className={skillsTab}>Skills</Link>
+                                <Link to="/resume" className={navLinkStyles}>Resume</Link>
                             </li>
                             <li className='option-item'>
-                                <Link to="/projects" className={projectsTab}>Projects</Link>
+                                <Link to="/skills" className={navLinkStyles}>Skills</Link>
                             </li>
                             <li className='option-item'>
-                                <Link to="/about" className={aboutTab}>About</Link>
+                                <Link to="/projects" className={navLinkStyles}>Projects</Link>
                             </li>
                             <li className='option-item'>
-                                <Link to="/contact" className={contactTab}>Contact</Link>
+                                <Link to="/contact" className={navLinkStyles}>Contact</Link>
                             </li>
                         </ul>
                         <button type="button" className='theme-change-button' onClick={onChangeTheme}>
-                            {isDark === true ? <MdLightMode className='light-icon'/> : <MdDarkMode className='dark-icon'/>}
+                            {isDark === true ? <MdLightMode className='light-icon' /> : <BsFillMoonStarsFill className='dark-icon'/>}
                         </button>
                     </div>
                 </nav>

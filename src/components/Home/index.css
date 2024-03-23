@@ -7,10 +7,24 @@
     align-items: center;
 }
 
+.profile-container {
+    background-image: url('file:///C:/myPortfolioApp/my-portfolio/src/components/Home/Hero%20Background.svg');
+    background-size: cover;
+    height: 510px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    padding-left: 33px;
+    margin-top: 100px;
+}
+
 .profile-img-styles{
-    height: 300px;
-    width: 300px;
-    border-radius: 150px;
+    height: 435px;
+    width: 84%;
 }
 
 .greeting-msg {
@@ -27,7 +41,7 @@
 }
 
 .role{
-    margin-top: 10px;
+    margin: 0px 0px 10px;
 }
 
 .resume-btn{
@@ -38,6 +52,9 @@
     border-width: 0px;
     border-radius: 7px;
     cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
 }
 
 .get-in-touch-btn {
@@ -48,10 +65,59 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 7px;
-    border-color: #f2f2f2;
+    border-color: #ffffff;
     margin-left: 10px;
     cursor: pointer;
 }
+
+.social-media-icons-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-media-icons-list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.icon-item {
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+}
+
+.light-border {
+    border-color: #ffffff;
+}
+
+.dark-border {
+    border-color: #000000;
+}
+
+.highlighted-name {
+    color: #737373;
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    margin-left: 10px;
+}
+
+.hand-emoji {
+    height: 55px;
+    width: 55px;
+}
+
 
 @media screen and (max-width: 768px){
     .content-container {
@@ -65,11 +131,7 @@
     }
 
     .profile-container{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
 
     .profile-img-styles {
@@ -77,3 +139,4 @@
         width: 150px;
     }
 }
+
